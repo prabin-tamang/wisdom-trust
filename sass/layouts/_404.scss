@@ -1,0 +1,50 @@
+.error {
+	text-align: center;
+
+	h1 {
+		clip-path: polygon(0 0, 100% 5%, 100% 95%, 0% 100%);
+		background: #f4e54f;
+
+		color: black;
+		padding: 3rem;
+		margin-bottom: 2rem;
+		display: inline-block;
+
+		@include tablet-portrait {
+			padding: 3rem 8rem 3rem 8rem;
+		}
+	}
+
+	.page-content {
+		.search-field {
+			padding: 1rem;
+			font-size: 1.5rem;
+		}
+
+		p {
+			margin-bottom: 1.5rem;
+		}
+		.search-submit {
+			padding: 1.4rem;
+			font-size: 1.5rem;
+		}
+	}
+}
+
+.no-results {
+	text-align: center;
+	.page-content {
+		.search-field {
+			padding: 1rem;
+			font-size: 1.5rem;
+		}
+
+		p {
+			margin-bottom: 1.5rem;
+		}
+		.search-submit {
+			padding: 1.4rem;
+			font-size: 1.5rem;
+		}
+	}
+}

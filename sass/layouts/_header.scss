@@ -1,0 +1,73 @@
+header {
+	.header-notification-bar {
+		display: none;
+		@include desktop {
+			display: block;
+		}
+		> .container {
+			max-width: 90%;
+			margin: 0 auto;
+			@include tablet-portrait {
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr;
+				align-items: center;
+			}
+
+			.important-message {
+				font-size: 1.4rem;
+			}
+		}
+		text-align: center;
+		padding: 1rem 0;
+		background: $light-gray;
+
+		.contact-details {
+			text-align: left;
+			ul li {
+				display: inline-block;
+
+				font-size: 1.4rem;
+			}
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		.header-socials a {
+			text-decoration: none;
+		}
+	}
+
+	#search {
+		position: relative;
+		form {
+			display: flex;
+			align-items: center;
+			button {
+				border: 0;
+				background: none;
+				cursor: pointer;
+				@include lg {
+					position: absolute;
+					top: 5px;
+					z-index: 200;
+				}
+			}
+
+			input {
+				display: none;
+
+				@include lg {
+					position: relative;
+					padding: 1rem 1rem 1rem 4.2rem;
+					background: white;
+					border-radius: 50px;
+					z-index: 100;
+					font-size: 1.6rem;
+					display: block;
+				}
+			}
+		}
+	}
+}

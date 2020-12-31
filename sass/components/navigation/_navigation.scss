@@ -1,0 +1,226 @@
+// navigation bar styles
+
+.navigation-bar {
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+
+	.site-logo {
+		height: auto;
+		width: 70px;
+	}
+
+	.full-width {
+		display: grid;
+		grid-template-columns: auto 1fr auto;
+		place-items: center;
+		width: 90%;
+		margin: 0 auto;
+		.mobile-nav {
+			height: 24px;
+			width: 24px;
+			@include desktop {
+				display: none;
+				padding: 0 10rem;
+			}
+		}
+	}
+
+	.main-navigation {
+		display: block;
+		width: 80%;
+		height: auto;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: white;
+		transform: translateX(-100vh);
+		transition: all 0.3s ease-in-out;
+		overflow: scroll;
+		z-index: 999999999999;
+
+		img {
+			height: auto;
+			width: 70px;
+			margin: 0 auto;
+			display: block;
+
+			@include desktop {
+				display: none;
+			}
+		}
+
+		@include tablet-portrait {
+			width: 50%;
+		}
+
+		@include desktop {
+			display: inline-block;
+			position: static;
+			background: none;
+			width: auto;
+			height: auto;
+			transform: translateX(0vh) !important;
+			transition: none;
+			// overflow: hidden;
+			overflow: unset;
+		}
+
+		// HOVERRRRRRRRRRRRRRRRRRR
+
+		.menu {
+			padding: 0;
+
+			.sub-menu {
+				width: 100%;
+				display: block;
+				padding: 1rem 0;
+				position: relative;
+
+				@include desktop {
+					display: none;
+					position: absolute;
+					border: 1px solid #efefef;
+					background: white;
+					top: 100%;
+					left: 0;
+					padding: 0;
+					width: 300px;
+
+					:hover .sub-menu {
+						display: block !important;
+					}
+
+					.sub-menu {
+						position: absolute;
+						top: 0;
+						left: 300px;
+						display: none !important;
+					}
+				}
+
+				li {
+					margin: 0;
+					display: block;
+					padding: 1.5rem;
+					border-bottom: 0;
+
+					@include desktop {
+						border-bottom: 1px solid #efefef;
+						padding: 2rem;
+					}
+
+					> a {
+						display: block;
+					}
+				}
+
+				li:hover {
+					background: $green;
+					color: white;
+				}
+			}
+
+			.menu-item-has-children:hover .sub-menu {
+				display: block;
+			}
+
+			.menu-item-has-children > a {
+				position: relative;
+				@include desktop {
+					margin-right: 1rem;
+				}
+
+				@include desktop {
+					position: static;
+				}
+			}
+
+			.menu-item-has-children > a::after {
+				content: url('/wp-content/themes/wisdom-trust/assets/images/arrow-down.svg');
+				position: absolute;
+				right: 0;
+				padding-right: 0.5rem;
+			}
+
+			.current_page_item.menu-item-has-children > a::after {
+				content: url('/wp-content/themes/wisdom-trust/assets/images/arrow-down-white.svg');
+				position: absolute;
+				right: 0;
+			}
+
+			@include desktop {
+				.menu-item-has-children > a:hover::after {
+					content: url('/wp-content/themes/wisdom-trust/assets/images/arrow-down-white.svg');
+					right: 0;
+				}
+			}
+		}
+		.nav-link {
+			display: block;
+			padding: 1.5rem 2.5rem;
+			color: #182b34;
+			border-bottom: 1px solid #efefef;
+
+			a {
+				display: block;
+				text-transform: uppercase;
+
+				@include tablet-portrait {
+					text-transform: capitalize;
+				}
+			}
+
+			@include desktop {
+				&:not(:last-child) {
+					margin-right: 2rem;
+				}
+
+				@include desktop {
+					display: inline-block;
+					color: black;
+					border-bottom: 0;
+					padding: 2rem 2rem;
+				}
+
+				position: relative;
+
+				:hover::before {
+					content: '';
+					height: 100%;
+					width: 100%;
+					position: absolute;
+					bottom: 0;
+
+					left: 0;
+					right: 0;
+					background-color: $green;
+					z-index: -1;
+				}
+
+				:hover {
+					color: white;
+				}
+			}
+			a {
+				text-decoration: none;
+				color: inherit;
+			}
+		}
+
+		// nav
+	}
+
+	.overlay {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: #182b34;
+		opacity: 0.6;
+		z-index: 990;
+		display: none;
+	}
+}

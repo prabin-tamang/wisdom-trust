@@ -1,0 +1,123 @@
+// page
+
+#page {
+	> .full-width {
+		@include tablet-portrait {
+			> ::after {
+				content: url(/wp-content/themes/wisdom-trust/assets/images/green-lines.svg);
+				position: absolute;
+				right: -150px;
+				top: 200px;
+			}
+		}
+		.container {
+			.wrapper {
+				@include tablet-portrait {
+					display: flex;
+				}
+
+				#pages-2 {
+					margin-top: 6rem;
+					background-color: #faf9f9;
+					padding: 2rem;
+					display: none;
+					@include tablet-portrait {
+						display: block;
+					}
+					h2 {
+						display: none;
+					}
+					ul {
+						padding: 0;
+					}
+					ul li {
+						list-style-type: none;
+						padding: 1rem;
+						font-size: 1.35rem;
+						border-bottom: 1px solid white;
+					}
+
+					a {
+						color: inherit;
+						text-decoration: none;
+					}
+				}
+
+				h1 {
+					clip-path: polygon(0 0, 100% 5%, 100% 95%, 0% 100%);
+					background: #f4e54f;
+
+					color: black;
+					padding: 3rem;
+					margin-bottom: 2rem;
+					display: inline-block;
+
+					@include tablet-portrait {
+						padding: 3rem 8rem 3rem 8rem;
+					}
+				}
+
+				main {
+					width: 100%;
+					@include tablet-portrait {
+						padding: 0 0 0 4rem;
+					}
+
+					ol,
+					ul {
+						margin-bottom: 2rem;
+						max-width: 90ch;
+
+						li:not(:last-child) {
+							margin-bottom: 1rem;
+						}
+					}
+					h1,
+					h2,
+					h3,
+					h4,
+					h5 {
+						margin-top: 1rem;
+						margin-bottom: 1rem;
+						text-transform: capitalize;
+					}
+
+					p {
+						margin-bottom: 2rem;
+						max-width: 90ch;
+
+						a {
+							padding: 1.5rem 3rem;
+							display: inline-block;
+							background-color: $navy-blue;
+							color: white;
+							text-decoration: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.activity-header {
+	p {
+		> a {
+			background-color: white !important;
+			color: inherit !important;
+			padding: 0 !important;
+			border-bottom: 1px solid #efefef;
+		}
+	}
+}
+
+.activity-time-since {
+	background-color: white !important;
+	color: inherit !important;
+	padding: 0 !important;
+	> a {
+		background-color: white !important;
+		color: inherit !important;
+		padding: 0 !important;
+	}
+}

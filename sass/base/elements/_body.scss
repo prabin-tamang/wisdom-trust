@@ -1,0 +1,29 @@
+html {
+	font-size: 62.5%;
+}
+
+html,
+body {
+	overflow-x: hidden;
+}
+
+* {
+	margin: 0;
+}
+
+body {
+	background: $color__background-body; // Fallback for when there is no custom background color defined.
+	font-size: 1.6rem;
+	font-family: 'Poppins', sans-serif;
+	position: relative;
+	overflow-x: hidden;
+}
+
+.site-main::before {
+	@include desktop {
+		content: url(/wp-content/themes/wisdom-trust/assets/images/group.png);
+		position: absolute;
+		top: 19%;
+		z-index: -1;
+	}
+}

@@ -1,0 +1,92 @@
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Column width with margin
+@mixin column-width($numberColumns: 3) {
+	width: map-get($columns, $numberColumns) -
+		(($columns__margin * ($numberColumns - 1)) / $numberColumns);
+}
+
+/*********************
+    BREAKPOINTS
+*********************/
+
+// @include insert-device-name {
+//     // Apply Styles
+// }
+
+@mixin phone {
+	@media screen and (min-width: 320px) and (max-width: 480px) {
+		@content;
+	}
+}
+
+@mixin phone-portrait {
+	@media screen and (max-width: 320px) {
+		@content;
+	}
+}
+
+@mixin phone-landscape {
+	@media screen and (min-width: 321px) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media screen and (min-width: 768px) and (max-width: 1024px) {
+		@content;
+	}
+}
+
+@mixin tablet-portrait {
+	@media screen and (min-width: 768px) {
+		@content;
+	}
+}
+
+@mixin lg-tablet {
+	@media screen and (min-width: 780px) {
+		@content;
+	}
+}
+
+@mixin small-laptop {
+	@media screen and (min-width: 860px) {
+		@content;
+	}
+}
+
+@mixin laptop {
+	@media screen and (min-width: 1024px) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media screen and (min-width: 1304px) {
+		@content;
+	}
+}
+
+@mixin laptop-large {
+	@media screen and (min-width: 1200px) {
+		@content;
+	}
+}
+
+@mixin lg {
+	@media screen and (min-width: 1824px) {
+		@content;
+	}
+}
+
+@mixin rwd($screen) {
+	@media (min-width: $screen+'px') {
+		@content;
+	}
+}

@@ -1,0 +1,90 @@
+.archives {
+	.full-width {
+		@include desktop {
+			background-image: url(/wp-content/themes/wisdom-trust/assets/images/group.png);
+		}
+		background-repeat: no-repeat;
+		background-position: 0.5% 10%;
+	}
+
+	.container {
+		.page-title {
+			clip-path: polygon(0 9%, 100% 0, 100% 95%, 0% 100%);
+			padding: 3rem;
+			background: #f4e54f;
+			display: inline-block;
+			@include tablet-portrait {
+				clip-path: polygon(0 9%, 100% 0, 100% 95%, 0% 100%);
+				padding: 3rem 8rem 3rem 8rem;
+				display: inline-block;
+				background: #f4e54f;
+				color: black;
+			}
+		}
+
+		a {
+			color: inherit;
+		}
+		.archives-post {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+			@include tablet-portrait {
+				grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+			}
+			grid-gap: 4rem;
+
+			article {
+				img {
+					display: block;
+				}
+				.article-content {
+					background: #182b34;
+					box-shadow: 0px 10px #f4e54f;
+					padding: 3rem;
+				}
+			}
+
+			.navigation {
+				grid-column: 1/-1;
+			}
+
+			.nav-links {
+				padding: 2rem 0;
+				display: flex;
+				justify-content: space-between;
+
+				a {
+					display: inline-block;
+					background-color: #182b34;
+					color: white;
+					padding: 2rem 3rem;
+					text-decoration: none;
+				}
+			}
+
+			h2 {
+				color: white;
+				margin-bottom: 0.3rem;
+				font-size: 2rem;
+
+				a {
+					color: inherit;
+					text-decoration: none;
+				}
+			}
+			.entry-meta {
+				color: #b1b1b1;
+			}
+
+			.entry-summary {
+				color: #c9c9c9;
+			}
+
+			.post {
+				a {
+					color: inherit;
+				}
+			}
+		}
+	}
+}
