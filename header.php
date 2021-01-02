@@ -90,8 +90,10 @@
                         </svg>
                     </div>
                     <!-- site logo -->
+                    
                     <div class="site-logo">
-                        <a href="/"><img src="/wp-content/themes/wisdom-trust/assets/images/logo.png"></a>
+                        <a href="/" class="mobile-logo"><img src="/wp-content/themes/wisdom-trust/assets/images/logo.png"></a>
+                        <a href="/" class="desktop-logo"><img src="/wp-content/themes/wisdom-trust/assets/images/desktop-logo.png"></a>
                     </div>
                     <nav id="site-navigation" class="main-navigation">
                         <a href="/"><img src="/wp-content/themes/wisdom-trust/assets/images/logo.png"></a>

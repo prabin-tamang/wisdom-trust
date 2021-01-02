@@ -168,6 +168,7 @@
 			}
 
 			h3 {
+				max-width: 28ch;
 				a {
 					color: white;
 					text-decoration: none;
@@ -185,23 +186,42 @@
 				color: #c9c9c9;
 			}
 
+			.blog-content-wrap {
+				filter: drop-shadow(8px 8px #f4e54f);
+				z-index: 100000;
+			}
+
 			.blog-content {
 				background: #182b34;
-				box-shadow: 0px 10px #f4e54f;
+
 				padding: 3rem;
+				font-size: 1.5rem;
+
 				@include tablet-portrait {
 					position: absolute;
 					bottom: 0px;
 					left: 0px;
 					max-width: 50ch;
-					padding: 2rem 1rem 1rem 3rem;
+					padding: 2.5rem 3rem 2rem 3rem;
 					z-index: 2;
 					color: white;
 					background: #182b34;
-					box-shadow: 10px 0px #f4e54f;
 				}
 				a {
 					text-decoration: none;
+				}
+
+				.blog-link {
+					display: inline-block;
+					color: white;
+					font-size: 1.2rem;
+					font-weight: bold;
+					position: relative;
+				}
+
+				.blog-link::after {
+					position: absolute;
+					content: url('/wp-content/themes/wisdom-trust/assets/images/arrow-blog-right.svg');
 				}
 			}
 		}

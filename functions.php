@@ -294,8 +294,8 @@ function votes_post_type() {
 
 	$args = array(
 		'labels' => array(
-			'name' => 'Votes',
-			'singular_name' => 'Vote',
+			'name' => 'Homepage Contents',
+			'singular_name' => 'Homepage Content',
 		),
 		// 'hierarchical' => true, 
 		'public' => true,

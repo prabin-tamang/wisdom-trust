@@ -113,6 +113,22 @@
         </div>
         <!-- <a href="#" class="button --button-secondary">Learn More</a> -->
     </section>
+
+    <section class="wisdom-rewards ">
+       <div class="container"> 
+            <?php $id = '244';  ?>
+                <?php  $post = get_post($id); ?>
+                <?php setup_postdata($post); ?>
+                    <div class="reward-content">
+                        <h2> <?php  the_title(); ?></h2>
+                            <?php the_content();?>
+                    </div>
+                <?php  the_post_thumbnail(); ?>
+               <?php  wp_reset_postdata(); ?> 
+        </div>
+    </section>
+
+
     <section class="sign-up-now full-width">
         <div class="container">
             <div class="description">
@@ -137,11 +153,14 @@
                     <a href="<?php the_permalink(); ?>"> <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>"></a>
                     <?php endif; ?>
                 </div>
+                <div class="blog-content-wrap"> 
                 <div class="blog-content">
                     <h3> <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                    <span>Posted Date : <?php echo get_the_date(); ?> </span>
+                    <span> <?php echo get_the_date(); ?> </span>
                     <a href="<?php the_permalink(); ?>">  <?php the_excerpt(); ?></a>
+                    <a href="<?php the_permalink(); ?>" class="blog-link">READ THE STORY</a>
                 </div>
+              </div>
             </article>
             <?php 
                 endwhile;

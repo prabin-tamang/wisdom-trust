@@ -17,11 +17,14 @@
             <?php if(has_post_thumbnail()) : ?>
             <a href="<?php the_permalink(); ?>"> <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>"></a>
             <?php endif; ?>
+            <div class="blog-content-wrap">
             <div class="blog-content">
                 <h3> <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                <span>Posted Date : <?php echo get_the_date(); ?> </span>
+                <span> <?php echo get_the_date(); ?> </span>
                 <a href="<?php the_permalink(); ?>">  <?php the_excerpt(); ?></a>
+                 <a href="<?php the_permalink(); ?>" class="blog-link">READ THE STORY</a>
             </div>
+        </div>
         </div>
     </article>
     <?php endwhile; else: endif; ?>

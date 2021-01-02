@@ -3,17 +3,40 @@
 .navigation-bar {
 	border-top: 1px solid #eee;
 	border-bottom: 1px solid #eee;
+	@include desktop {
+		padding: 1rem 0;
+	}
 
 	.site-logo {
-		height: auto;
-		width: 70px;
+		display: grid;
+		justify-content: start;
+
+		.mobile-logo {
+			height: auto;
+			width: 70px !important;
+		}
+
+		.desktop-logo {
+			display: none;
+		}
+
+		@include desktop {
+			.mobile-logo {
+				display: none;
+			}
+			.desktop-logo {
+				display: block;
+				height: auto;
+				width: 320px !important;
+			}
+		}
 	}
 
 	.full-width {
 		display: grid;
 		grid-template-columns: auto 1fr auto;
 		place-items: center;
-		width: 90%;
+		width: 95%;
 		margin: 0 auto;
 		.mobile-nav {
 			height: 24px;

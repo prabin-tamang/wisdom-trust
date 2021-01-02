@@ -236,7 +236,7 @@ main {
 		}
 
 		@include desktop {
-			margin-bottom: 5rem;
+			// margin-bottom: 5rem;
 
 			> ::after {
 				content: url(/wp-content/themes/wisdom-trust/assets/images/dots.svg);
@@ -410,29 +410,49 @@ main {
 					}
 				}
 
+				.blog-content-wrap {
+					filter: drop-shadow(8px 8px #f4e54f);
+					z-index: 100000;
+				}
+
 				.blog-content {
 					background: #182b34;
-					box-shadow: 0px 10px #f4e54f;
+					font-size: 1.5rem;
+
 					padding: 3rem;
 					color: white;
+
 					@include desktop {
 						position: absolute;
 						bottom: 0px;
 						left: 0px;
 						max-width: 50ch;
-						padding: 3rem 4rem 4rem 4rem;
+						padding: 2.5rem 4rem 2rem 4rem;
 						z-index: 2;
-
 						background: #182b34;
-						box-shadow: 10px 0px #f4e54f;
 					}
 					a {
 						text-decoration: none;
+					}
+					.blog-link {
+						margin-top: 2rem;
+						display: inline-block;
+						color: white;
+						font-size: 1.2rem;
+						font-weight: bold;
+						position: relative;
+					}
+
+					.blog-link::after {
+						position: absolute;
+						content: url('/wp-content/themes/wisdom-trust/assets/images/arrow-blog-right.svg');
 					}
 				}
 
 				h3 {
 					margin-bottom: 0.3rem;
+					letter-spacing: 0.05rem;
+					max-width: 25ch;
 
 					a {
 						color: white;
@@ -441,10 +461,10 @@ main {
 				}
 
 				span {
-					display: block;
+					display: inline-block;
 					margin-bottom: 1.5rem;
 					color: #b1b1b1;
-					font-size: 1.5rem;
+					font-size: 1.4rem;
 				}
 
 				p {
@@ -457,7 +477,7 @@ main {
 	// wisdom section
 
 	.wisdom {
-		margin-bottom: 5rem;
+		// margin-bottom: 5rem;
 		display: flex;
 		justify-content: flex-end;
 
@@ -656,6 +676,83 @@ main {
 
 			p {
 				margin-bottom: 2rem;
+			}
+		}
+	}
+
+	.wisdom-rewards {
+		margin-bottom: 5rem;
+		position: relative;
+		padding: 1rem;
+
+		background-color: #fafafa;
+
+		.container {
+			@include desktop {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				padding: 4rem 8rem 4rem 8rem;
+			}
+			grid-gap: 4rem;
+			place-items: center;
+			padding: 4rem 1rem 4rem 1rem;
+
+			> ::before {
+				content: url(/wp-content/themes/wisdom-trust/assets/images/wiggle.svg);
+				position: absolute;
+				top: -40px;
+				left: 505px;
+				transform: rotate(180deg);
+			}
+
+			> ::after {
+				content: url(/wp-content/themes/wisdom-trust/assets/images/small-wiggle.svg);
+				position: absolute;
+				bottom: -24px;
+				right: 200px;
+				transform: rotate(360deg);
+			}
+
+			h2 {
+				margin-bottom: 2rem;
+				background-color: #82b54a;
+				color: white;
+				clip-path: polygon(0 0, 100% 0, 94% 100%, 5% 100%);
+				display: inline-block;
+				position: absolute;
+				top: -70px;
+				left: 0px;
+				padding: 3rem 6rem 3rem 5rem;
+				@include tablet-portrait {
+					padding: 4rem 4em 4rem 10rem;
+					clip-path: polygon(0 0, 100% 0, 94% 100%, 5% 100%);
+				}
+			}
+
+			h2::after {
+				content: '';
+				background: white;
+				width: 25px;
+				border-radius: 5px;
+				height: 5px;
+				display: block;
+			}
+
+			h3 {
+				margin-bottom: 1rem;
+			}
+
+			p {
+				margin-bottom: 2rem;
+				max-width: 70ch;
+			}
+
+			a {
+				padding: 1.5rem 4rem;
+				display: inline-block;
+				background-color: #182b34;
+				color: white;
+				text-decoration: none;
 			}
 		}
 	}
